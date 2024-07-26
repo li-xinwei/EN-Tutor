@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EN-Tutor
+
+    </title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            
+            background-color: #EEEEEE;
+            
+            
+            height: 100vh; /* Ensure body takes up full viewport height */
+            margin: 0;
+        }
+
+        .display{
+            width: 80vw;
+            height: 20vh;
+            display: flex;
+            
+            align-items: center;
+            margin-left: 10vw;
+            
+            
+        }
+        .searchbox{
+            width: 70%;
+            height: 10vh;
+            background-color: white;
+            border-radius: 40px;
+            box-shadow: 
+            inset 1px 1px 20px rgba(0, 0, 0, 0.2),
+      inset -10px -10px 20px rgba(0,0,0,0.2), /* Inner shadow for added depth */
+      10px 10px 15px -5px rgba(0,0,0,0.5); /* Outer shadow */
+            display: flex;
+            align-items: center;
+        }
+        .display form{
+            width: 100%;
+            height: 10vh;
+            
+            margin-left: 5%;
+            border-radius: 40px;
+            display: flex;
+            border: none;
+        }
+        button{
+            width: 20%;
+            height: 10vh;
+            background-color: #81A263;
+            margin-left: 5%;
+            border-radius: 40px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            border: none;
+            box-shadow: 
+            inset 1px 1px 20px rgba(0, 0, 0, 0.2),
+      inset -10px -10px 20px rgba(0,0,0,0.2), /* Inner shadow for added depth */
+      10px 10px 15px -5px rgba(0,0,0,0.5); /* Outer shadow */
+        }
+        .title{
+            width: 80vw;
+            height: 20vh;
+            margin-left: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20vh;
+            
+            
+        }
+        .title h1{
+            font-family: "Roboto Slab", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 100px;
+            color:#81A263;
+            
+        }
+
+        button h1{
+            font-family: "Roboto Slab", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .searchbox input{
+            margin-left: 5%;
+            height: 50%;
+            width: 90%;
+            border: none;
+            font-size: 2vw;
+            font-family: "Roboto Slab", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            
+        }
+        input:focus{
+            outline: none;
+        }
+        .styles{
+            width: 80vw;
+            height: 20vh;
+            margin-left: 10vw;
+           
+            display: flex;
+
+        }
+        .styleCard{
+            width: 20%;
+            height: 100%;
+            
+            
+            margin-left: 5%;
+            border-radius: 25px;
+            box-shadow: 
+            inset 1px 1px 20px rgba(0, 0, 0, 0.2),
+      inset -10px -10px 20px rgba(0,0,0,0.2), /* Inner shadow for added depth */
+      10px 10px 15px -5px rgba(0,0,0,0.5); /* Outer shadow */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: 
+        linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), /* Semi-transparent overlay */
+        url('/static/images/emoji-laughing.svg') no-repeat center center;
+    background-size: contain;
+        }
+        .styleCard2{
+            width: 20%;
+            height: 100%;
+            
+            margin-left: 15%;
+            border-radius: 25px;
+            box-shadow: 
+            inset 1px 1px 20px rgba(0, 0, 0, 0.2),
+      inset -10px -10px 20px rgba(0,0,0,0.2), /* Inner shadow for added depth */
+      10px 10px 15px -5px rgba(0,0,0,0.5); /* Outer shadow */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: 
+        linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), /* Semi-transparent overlay */
+        url('/static/images/emoji-smile.svg') no-repeat center center;
+    background-size: contain;
+        }
+        .styleCard3{
+            width: 20%;
+            height: 100%;
+            
+            margin-left: 15%;
+            border-radius: 25px;
+            box-shadow: 
+            inset 1px 1px 20px rgba(0, 0, 0, 0.2),
+      inset -10px -10px 20px rgba(0,0,0,0.2), /* Inner shadow for added depth */
+      10px 10px 15px -5px rgba(0,0,0,0.5); /* Outer shadow */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: 
+        linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), /* Semi-transparent overlay */
+        url('/static/images/emoji-surprise.svg') no-repeat center center;
+    background-size: contain;
+        }
+       
+        .styles h1{
+            font-family: "Roboto Slab", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+
+        }
+
+        .styleCard:hover{
+            background-color: grey;
+        }
+
+        .styleCard2:hover{
+            background-color: grey;
+        }
+        .styleCard3:hover{
+            background-color: grey;
+        }
+
+        .models{
+            width: 80vw;
+            height: 20vh;
+            margin-left: 10vw;
+            margin-top: 5vh;
+           
+            display: flex;
+            
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="title"><h1>EN-Tutor</h1></div>
+    <div class="display">
+        <form action="{{url_for('chat')}}" method="post">
+        <div class="searchbox">
+                <input type="text" placeholder="Start a conversation with your tutor..." name="question" style="background-color: transparent;">
+        </div>
+        <button>
+            <h1 style="color: white;">Send</h1>
+        </button>
+        
+    </form>
+
+        
+        
+    </div>
+    <form action="{{url_for('selectStyle')}}" method="post" class="styles">
+        {% if 'humorous' == teaching_style %}
+        <button class="styleCard" name="humorous" id="1" style="background-color: grey;"><h1>Humorous</h1></button>
+        <button class="styleCard2" name="passionate" id="2" style="background-color: white;"><h1>Passionate</h1></button>
+        <button class="styleCard3" name="creative" id="3" style="background-color: white;"><h1>Creative</h1></button>
+        {% elif 'passionate' == teaching_style %}
+        <button class="styleCard" name="humorous" id="1" style="background-color: white;"><h1>Humorous</h1></button>
+        <button class="styleCard2" name="passionate" id="2" style="background-color: grey;"><h1>Passionate</h1></button>
+        <button class="styleCard3" name="creative" id="3" style="background-color: white;"><h1>Creative</h1></button>
+        {% elif 'creative' == teaching_style %}
+        <button class="styleCard" name="humorous" id="1" style="background-color: white;"><h1>Humorous</h1></button>
+        <button class="styleCard2" name="passionate" id="2" style="background-color: white;"><h1>Passionate</h1></button>
+        <button class="styleCard3" name="creative" id="3" style="background-color: grey;"><h1>Creative</h1></button> 
+        {% else %}
+        <button class="styleCard" name="humorous" id="1" style="background-color: white;"><h1>Humorous</h1></button>
+        <button class="styleCard2" name="passionate" id="2" style="background-color: white;"><h1>Passionate</h1></button>
+        <button class="styleCard3" name="creative" id="3" style="background-color: white;"><h1>Creative</h1></button>
+        {% endif %}
+
+
+    </form>
+    <form action="{{url_for('selectModel')}}" method="post" class="models">
+        {% if model=='gpt' %}
+        <button class="gpt" name="gpt" style="background-color: grey;"><h1>GPT</h1></button>
+        <button class="qwen" name="qwen" style="background-color: white;"><h1>QWEN</h1></button>
+        {% elif model=='qwen' %}
+        <button class="gpt" name="gpt" style="background-color: white;"><h1>GPT</h1></button>
+        <button class="qwen" name="qwen" style="background-color: grey;"><h1>QWEN</h1></button>
+        {% else %}
+        <button class="gpt" name="gpt" style="background-color: white;"><h1>GPT</h1></button>
+        <button class="qwen" name="qwen" style="background-color: white;"><h1>QWEN</h1></button>
+        {% endif %}
+
+
+
+
+    </form>
+    
+    
+</body>
+</html>
